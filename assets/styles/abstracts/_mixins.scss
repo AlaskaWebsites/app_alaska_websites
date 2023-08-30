@@ -1,0 +1,31 @@
+@mixin font-source($size: false, $color: false, $weight: false, $lineHeight: false) {
+    @if $size {
+        font-size: $size !important;
+    }
+
+    @if $color {
+        color: $color;
+    }
+
+    @if $weight {
+        font-weight: $weight;
+    }
+
+    @if $lineHeight {
+        line-height: $lineHeight;
+    }
+}
+
+@mixin card-mixin {
+    .card {
+        margin: 0 100px 100px 100px;
+        border-radius: 6px;
+        padding: 30px;
+    }
+
+    @media only screen and (max-width: 900px) {
+        .card {
+            margin: 0 25px 25px 25px;
+        }
+    }
+}
